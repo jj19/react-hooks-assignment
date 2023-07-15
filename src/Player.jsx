@@ -1,14 +1,17 @@
 import React from "react";
 import { useState } from "react";
-function Player() {
+function Player(prop) {
+  function addPoint (){
+
+  }
   return (
     <div className="container-fluid border border-dark p-3 m-3">
       <div className="row justify-content-center">
         {/* Render Name here */}
-        <h2 className="text-center"></h2>
+        <h2 key={prop.id} className="text-center">{prop.name}</h2>
       </div>
       <div className="row justify-content-center">
-        <p className="text-center fs-3">{/* Render score here */}</p>
+        <p className="text-center fs-3">{prop.score}</p>
       </div>
       <div className="row justify-content-center">
         <div className="col-md-6">
